@@ -2,10 +2,10 @@
   {
     "kernelSource": {
       "name": "NGK_android_kernel_xiaomi_sdm845",
-      "repo": "https://github.com/Xiaomi-sdm845-KSU/NGK_android_kernel_xiaomi_sdm845",
-      "branch": "t-caf-ksu",
-      "device": "beryllium",
-      "defconfig": "nogravity_defconfig"
+      "repo": "https://github.com/crdroidandroid/android_kernel_xiaomi_sm6150",
+      "branch": "13.0",
+      "device": "violet ",
+      "defconfig": "vendor/sdmsteppe-perf_defconfig"
     },
     "withKernelSU": true,
     "toolchains": [
