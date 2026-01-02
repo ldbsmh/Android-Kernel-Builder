@@ -1,0 +1,73 @@
+[
+  {
+    "kernelSource": {
+      "name": "android_kernel_xiaomi_sdm845",
+      "repo": "https://github.com/crdroidandroid/android_kernel_xiaomi_sm6150",
+      "branch": "13.0",
+      "device": "violet",
+      "defconfig": "vendor/sdmsteppe-perf_defconfig"
+    },
+
+    "withKernelSU": true,
+
+    "toolchains": [
+      {
+        "repo": "https://github.com/LineageOS/android_prebuilts_clang_host_linux-x86",
+        "branch": "lineage-20.0",
+        "name": "clang",
+        "binPath": [
+          "./clang-r450784e/bin"
+        ]
+      },
+      {
+        "repo": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64",
+        "branch": "gcc-4.9",
+        "name": "gcc64",
+        "binPath": [
+          "./aarch64-linux-android-4.9/bin"
+        ]
+      },
+      {
+        "repo": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm",
+        "branch": "gcc-4.9",
+        "name": "gcc32",
+        "binPath": [
+          "./arm-linux-androideabi-4.9/bin"
+        ]
+      }
+    ],
+
+    "params": {
+      "ARCH": "arm64",
+
+      "CC": "clang",
+      "LD": "ld.lld",
+
+      "AR": "llvm-ar",
+      "NM": "llvm-nm",
+      "OBJCOPY": "llvm-objcopy",
+      "OBJDUMP": "llvm-objdump",
+      "READELF": "llvm-readelf",
+      "OBJSIZE": "llvm-size",
+      "STRIP": "llvm-strip",
+
+      "HOSTCC": "clang",
+      "HOSTCXX": "clang++",
+
+      "LLVM": "1",
+      "LLVM_IAS": "1",
+
+      "externalCommand": {
+        "CROSS_COMPILE": "aarch64-linux-android-",
+        "CROSS_COMPILE_ARM32": "arm-linux-androideabi-"
+      }
+    },
+
+    "AnyKernel3": {
+      "use": true,
+      "release": true,
+      "repo": "https://github.com/Xiaomi-sdm845-KSU/AnyKernel3",
+      "branch": "master"
+    }
+  }
+]
