@@ -2,8 +2,8 @@
   {
     "kernelSource": {
       "name": "android_kernel_xiaomi_sdm845",
-      "repo": "https://github.com/crdroidandroid/android_kernel_xiaomi_sm6150",
-      "branch": "13.0",
+      "repo": "https://github.com/LineageOS/android_kernel_xiaomi_sm6150",
+      "branch": "lineage-23.0",
       "device": "violet",
       "defconfig": "vendor/sdmsteppe-perf_defconfig"
     },
